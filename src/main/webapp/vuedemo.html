@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueDemo</title>
+</head>
+<body>
+<div id = "app">
+<input v-model="username">
+    {{username}}
+    <a v-bind:href="url">点击一下</a>
+    <input type="button" v-on:click = "show()" value="点一下我">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data(){
+            return{
+                username:"",
+                url:"http://www.baidu.com"
+            }
+        },
+        methods:{
+            show(){
+                alert("niahao");
+            }
+        }
+    })
+</script>
+</body>
+</html>
